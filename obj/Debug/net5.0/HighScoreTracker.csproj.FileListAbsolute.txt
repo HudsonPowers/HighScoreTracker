@@ -1,0 +1,15 @@
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/bin/Debug/net5.0/HighScoreTracker.deps.json
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/bin/Debug/net5.0/HighScoreTracker.runtimeconfig.json
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/bin/Debug/net5.0/HighScoreTracker.runtimeconfig.dev.json
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/bin/Debug/net5.0/HighScoreTracker.dll
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/bin/Debug/net5.0/ref/HighScoreTracker.dll
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/bin/Debug/net5.0/HighScoreTracker.pdb
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.csproj.AssemblyReference.cache
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.AssemblyInfoInputs.cache
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.AssemblyInfo.cs
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.csproj.CoreCompileInputs.cache
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.dll
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/ref/HighScoreTracker.dll
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.pdb
+/Users/hudsontaylorpowers/Documents/GitHub/HighScoreTracker/obj/Debug/net5.0/HighScoreTracker.genruntimeconfig.cache

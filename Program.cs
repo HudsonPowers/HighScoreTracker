@@ -7,8 +7,30 @@ namespace HighScoreTracker
 {
     class Program // Feedback(jcollard 2022-01-28): Your methods must go inside of a class
     {
+
+        public static void TestAll()
+        {
+            bool testLoadScoreValues = TestLoadScoreValues.RunTest();
+            Console.WriteLine($"Test LoadScoreValues(filename): {testLoadScoreValues}");
+            
+            bool testGetScoreValue = TestGetScoreValue.RunTest();
+            Console.WriteLine($"Test GetScoreValue(score): {testGetScoreValue}");
+
+            bool testFindInsertionPoint = TestFindInsertionPoint.RunTest();
+            Console.WriteLine($"Test FindInsertionPoint(newscore): {testFindInsertionPoint}");
+
+            bool testAddScore = TestAddScore.RunTest();
+            Console.WriteLine($"Test AddScore(name, score, insertAt, scores): {testAddScore}");
+        }
         static void Main(String[] args)
         {
+
+            if (args.Length > 0 && args[0] == "test")
+            {
+                TestAll();
+                return;
+            }
+
             // Feedback(jcollard 2022-01-28): Great job! Your method stubs are
             // looking good. You need to finish the documentation comment before
             // moving on to Part 2.2.

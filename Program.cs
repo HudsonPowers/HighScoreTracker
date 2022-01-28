@@ -39,10 +39,11 @@ namespace HighScoreTracker
         }
 
         /// <summary>
-        /// TODO(jcollard 2022-01-28): Complete documentation comments
+        /// The scores.txt file is stored in two columns. The first column is the players name and the second column is the players score. 
+        /// This method loads the file and extracts the second column into a List<int>.
         /// </summary>
-        /// <param name="filename"></param>
-        /// <returns></returns>
+        /// <param name="filename">high_scores.txt</param>
+        /// <returns>list<int></returns>
         static List<int> LoadScoreValues(string filename)
         {
             // Check to see if the specified filename exists.
@@ -58,10 +59,11 @@ namespace HighScoreTracker
 
         // static int GetScoreValue(string score);
         /// <summary>
-        /// TODO(jcollard 2022-01-28): Complete documentation comments
+        /// This is a helper method which, given a score string of the format "name score", extracts the score value from the second column,
+        /// parses it into an int value, and finally returns it.
         /// </summary>
-        /// <param name="score"></param>
-        /// <returns></returns>
+        /// <param name="score">Hudson75</param>
+        /// <returns> Hudson - 75</returns>
         static int GetScoreValue(string score)
         {
             //Split the specified score string into two strings using ' ' as a delimiter
@@ -73,11 +75,12 @@ namespace HighScoreTracker
 
         // static int FindInsertionPoint(List<int> values, int newScore);
         /// <summary>
-        /// TODO(jcollard 2022-01-28): Complete documentation comments
+        /// Given a list of score values and a newScore to insert into the high scores table,
+        /// returns the index where the new score should be inserted.
         /// </summary>
-        /// <param name="values"></param>
-        /// <param name="newScore"></param>
-        /// <returns></returns>
+        /// <param name="values">2, 42</param>
+        /// <param name="newScore">56</param>
+        /// <returns>56 --> newscore</returns>
         static int FindInsertionPoint(List<int> values, int newScore)
         {
             // Initialize a counter variable, insertAt, to 0.
@@ -91,12 +94,13 @@ namespace HighScoreTracker
 
         // static void AddScore(String name, int score, int insertAt, List<String> scores);
         /// <summary>
-        /// TODO(jcollard 2022-01-28): Complete documentation comments
+        /// Given the name, score, insertion location, and a list of strings containing the current high scores, inserts the name and score at the specified location.
+        /// Then writes the results to "scores.txt".
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="score"></param>
-        /// <param name="insertAt"></param>
-        /// <param name="scores"></param>
+        /// <param name="name">Hudson</param>
+        /// <param name="score">75</param>
+        /// <param name="insertAt">1</param>
+        /// <param name="scores">3, 15, 42, 68, 75</param>
         static void AddScore(String name, int score, int insertAt, List<String> scores)
         {
             // Create a string variable entry which will be the new row to add to the high score list.

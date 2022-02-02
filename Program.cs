@@ -10,6 +10,8 @@ namespace HighScoreTracker
 
         public static void TestAll()
         {
+            // Feedback(jcollard 2022-02-02): You're off to a great start! The next
+            // step is to write your tests.
             bool testLoadScoreValues = TestLoadScoreValues.RunTest();
             Console.WriteLine($"Test LoadScoreValues(filename): {testLoadScoreValues}");
             
@@ -66,7 +68,7 @@ namespace HighScoreTracker
         /// </summary>
         /// <param name="filename">high_scores.txt</param>
         /// <returns>list<int></returns>
-        static List<int> LoadScoreValues(string filename)
+        public static List<int> LoadScoreValues(string filename)
         {
             // Check to see if the specified filename exists.
             // If it does not, throw an exception stating the file cannot be loaded

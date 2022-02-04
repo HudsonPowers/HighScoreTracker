@@ -125,7 +125,7 @@ namespace HighScoreTracker
         /// <param name="score">75</param>
         /// <param name="insertAt">1</param>
         /// <param name="scores">3, 15, 42, 68, 75</param>
-        static void AddScore(String name, int score, int insertAt, List<String> scores)
+        public static void AddScore(String name, int score, int insertAt, List<String> scores)
         {
             // Create a string variable entry which will be the new row to add to the high score list.
             // Assign entry to be $"{name} {score}"

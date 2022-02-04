@@ -37,7 +37,7 @@ namespace HighScoreTracker
             // TODO(jcollard 2022-02-02): Write several more tests cases
 
 
-            // If you get through all of the test cases, you should return true
+            //TODO(jcollard 2022-02-04): If you get through all of the test cases, you should return true
             return false;
         }
 

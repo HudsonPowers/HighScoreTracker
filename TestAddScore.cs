@@ -28,8 +28,11 @@ namespace HighScoreTracker
                 Console.Error.WriteLine($"Failure, expected bob 7000 but was {testList[3]}");
                 return false;
             }
-            Program.AddScore(null, 2000, 2, testList);
-            if(testList[5] != ("{null}2000");
+            Program.AddScore(null, 2000, 2, testList); // TODO(jcollard 2022-02-04): This should probably cause an error to be thrown.
+            if(testList[5] != "{null}2000")
+            {
+
+            }
 
             Program.AddScore("sam", 7500, 2, testList);
 

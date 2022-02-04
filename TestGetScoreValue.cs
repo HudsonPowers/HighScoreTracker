@@ -9,8 +9,8 @@ namespace HighScoreTracker
     {
         public static bool RunTest()
         {
-            list<int> scores = Program.LoadScoreValues("high_scores.txt");
-            int result = Program.GetScoreValues("Carl, 27");
+            list<int> scores = Program.LoadScoreValues("high_scores.txt"); // TODO (jcollard 2022-02-04): I think you can delete this line.
+            int result = Program.GetScoreValues("Carl, 27"); //TODO(jcollard 2022-02-04): This should be "GetScoreValue". You will need to change GetScoreValue to public in Program.cs
 
             if (result != 27)
             {

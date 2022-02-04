@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic; // Feedback(jcollard 2022-02-02): Necessary to use List
 using System.IO;
 
 namespace HighScoreTracker
@@ -9,38 +10,35 @@ namespace HighScoreTracker
     {
         public static bool RunTest()
         {
+            // TODO(jcollard 2022-02-02):
+            // Each of your tests should call the associated method with various inputs
+            // You should write the expected outputs. For example, one of the possible inputs
+            // to LoadScoreValues(string filename) could be:
 
-            List<string> scoreList;
-            scoreList = new List<string>();
-            scoreList.Add("drake 8000");
-            scoreList.Add("dog 7500");
-            scoreList.Add("cat 7300");
-            Program.AddScore("mouse", 10000, 0, scoreList);
+            List<int> testScores = Program.LoadScoreValues("test_high_scores.txt");
 
-            if (scoreList.Count != 3)
+            // Create a file called test_high_scores.txt that contains some test data
+            // Based on that file, how many elements should be in the testScores list?
+            // What values should be contained inside?
+            // For example:
+
+            if (testScores.Count != 3)
             {
-                Console.Error.WriteLine($"Failure, expected 3 but result was {countList.Count}");
-                return false;
-            }
-            if (scoreList.Count != 4)
-            {
-                Console.Error.WriteLine($"Failure, expected 4 but result was {countList.Count}");
-                return false;
-            }
-            if (score[0] != "drake 8000")
-            {
-                Console.Error.WriteLine($"Failure, expected drake 8000 but result was {score[0]}");
+                Console.Error.WriteLine($"Failure: Expected the list to contain 3 elements but it contained {testScores.Count}");
                 return false;
             }
 
-            // Check to see if the specified filename exists.
-            // If it does not, throw an exception stating the file cannot be loaded
-            // Load the file as a List and store it in a variable named, "lines"
-            // Create a List called values.
-            // Loop through each line
-            // For each line, use GetScoreValue to extract the second column as an int
-            // Add the int to values
-            // Return values
+            if (testScores[0] != 8000)
+            {
+                Console.Error.WriteLine($"Failure: Expected the first element in the list to be 8000 but it was {testScores[0]}.");
+                return false;
+            }
+
+            // TODO(jcollard 2022-02-02): Write several more tests cases
+
+
+            //TODO(jcollard 2022-02-04): If you get through all of the test cases, you should return true
+            return false;
         }
 
     }

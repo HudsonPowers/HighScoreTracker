@@ -88,7 +88,7 @@ namespace HighScoreTracker
         /// </summary>
         /// <param name="score">Hudson75</param>
         /// <returns> Hudson - 75</returns>
-        static int GetScoreValue(string score)
+        static public int GetScoreValue(string score)
         {
             //Split the specified score string into two strings using ' ' as a delimiter
             // Store the result in a variable called parts
@@ -105,7 +105,7 @@ namespace HighScoreTracker
         /// <param name="values">2, 42</param>
         /// <param name="newScore">56</param>
         /// <returns>56 --> newscore</returns>
-        static int FindInsertionPoint(List<int> values, int newScore)
+        static public int FindInsertionPoint(List<int> values, int newScore)
         {
             // Initialize a counter variable, insertAt, to 0.
             // Loop through each value in values

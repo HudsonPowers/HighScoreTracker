@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace HighScoreTracker
@@ -10,7 +11,7 @@ namespace HighScoreTracker
         public static bool RunTest()
         {
             List<int> scores = new List<int>(); //TODO(jcollard 2022-02-04): You need to add `using System.Collections.Generic;` to the top of this file.
-            scores.AddScore("Hudson, 9000");
+            scores.AddScore("Hudson, 9000"); // why are all the add scores red???
             scores.AddScore(1000);
             scores.AddScore(900);
             scores.AddScore(800);

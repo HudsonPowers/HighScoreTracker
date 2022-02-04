@@ -29,12 +29,11 @@ namespace HighScoreTracker
                 return false;
             }
             Program.AddScore(null, 2000, 2, testList);
-            if(testList[5] != ("{null}2000");
+            if(testList[5] != ($"{null}2000");
+            {
+                Console.Error.WriteLine($"Failure, expected {null}");
+            }
 
-            Program.AddScore("sam", 7500, 2, testList);
-
-
-            Program.AddScore("hello world lots of spaces", 7500, 2, testList);
 
 
 

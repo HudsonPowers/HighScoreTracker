@@ -20,13 +20,6 @@ namespace HighScoreTracker
                 Console.Error.WriteLine($"Failure, your score should have been 950 but was not");
                 return false;
             }
-
-            Console.WriteLine("The method should display 'InsertAt = 0'");
-            if (result != 1)
-            {
-                Console.Error.WriteLine("the result expected was 0 but was");
-                return false;
-            }
             if (scores[0] != "Hudson 9001")
             {
                 Console.Error.WriteLine("The expected result was Hudson 9001 but it wasn't");

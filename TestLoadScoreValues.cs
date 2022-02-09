@@ -22,7 +22,7 @@ namespace HighScoreTracker
             // What values should be contained inside?
             // For example:
 
-            if (testScores.Count != 3)
+            if (testScores.Count != 4)
             {
                 Console.Error.WriteLine($"Failure: Expected the list to contain 3 elements but it contained {testScores.Count}");
                 return false;
@@ -34,7 +34,29 @@ namespace HighScoreTracker
                 return false;
             }
 
-             // TODO(jcollard 2022-02-09): Complete the TODO below this one
+            if (testScores[1] != 5000)
+            {
+                Console.Error.WriteLine($"Failure: Expected the first element in the list to be 5000 but it was {testScores[1]}.");
+                return false;
+            }
+
+            if (testScores[2] != 333)
+            {
+                Console.Error.WriteLine($"Failure: Expected the first element in the list to be 333 but it was {testScores[2]}.");
+                return false;
+            }
+
+            try
+            {
+                Program.LoadScoreValues("Notafile.txt");
+                Console.WriteLine("Notafile does not exist so catch");
+            }
+
+            catch (exception e)
+            {
+                
+            }
+
             // TODO(jcollard 2022-02-02): Write several more tests cases
 
             return true;

@@ -105,7 +105,7 @@ namespace HighScoreTracker
         /// <param name="values">2, 42</param>
         /// <param name="newScore">56</param>
         /// <returns>56 --> newscore</returns>
-        static public int FindInsertionPoint(List<int> values, int newScore)
+       public static int FindInsertionPoint(List<int> values, int newScore)
         {
             // Initialize a counter variable, insertAt, to 0.
             // Loop through each value in values

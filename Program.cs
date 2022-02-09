@@ -78,6 +78,8 @@ namespace HighScoreTracker
             // For each line, use GetScoreValue to extract the second column as an int
             // Add the int to values
             // Return values
+
+            // TODO(jcollard 2022-02-09): Complete this method third
             return null;
         }
 
@@ -94,6 +96,8 @@ namespace HighScoreTracker
             // Store the result in a variable called parts
             // Parse the second element as an int int.Parse(parts[1])
             // Return the result
+
+            // TODO(jcollard 2022-02-09): Complete this method first
             return -1;
         }
 
@@ -112,6 +116,8 @@ namespace HighScoreTracker
             // If the new score is greater than the current value, we should insert above that score so we return insertAt.
             // Otherwise, the new score should not be inserted above this score so we increment insertAt by 1 and continue.
             // If we reach the end of the list, insertAt should be the length of the list so we return insertAt.
+
+            // TODO(jcollard 2022-02-09): Complete this method second
             return -1;
         }
 
@@ -133,6 +139,8 @@ namespace HighScoreTracker
             // Use File.WriteLines to write each line of the scores list to the file "scores.txt"
             // return -1; // Feedback(jcollard 2022-01-28): cannot return
             // anything from a void method
+
+            // TODO(jcollard 2022-02-09): Complete this method last
         }
 
     }

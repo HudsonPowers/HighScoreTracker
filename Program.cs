@@ -33,32 +33,15 @@ namespace HighScoreTracker
                 return;
             }
 
-            // Feedback(jcollard 2022-01-28): Great job! Your method stubs are
-            // looking good. You need to finish the documentation comment before
-            // moving on to Part 2.2.
+            // TODO(jcollard 2022-02-11):
+            // After you have finished all your methods, your main method should do the following:
+            // 1. Get the player's name
+            // 2. Get the player's score
+            // 3. LoadScoreValues
+            // 4. FindInsertPoint
+            // 5. AddScore
+            // 6. Display high score list
 
-            // Below is an example of how to load the high_scores.txt file and
-            // extract the left and right columns
-
-            // This line loads the file and converts it to a list of strings
-            List<string> lines = File.ReadAllLines("high_scores.txt").ToList();
-
-            // Extract the 3rd line from the list
-            string collard = lines[2];
-
-            // Split the string into two elements
-            List<string> elems = collard.Split(" ").ToList();
-
-            // Get the first element
-            string name = elems[0];
-
-            // Get the second element
-            string scoreString = elems[1];
-
-            // Convert the score to an integer
-            int score = int.Parse(scoreString);
-
-            Console.WriteLine($"{name} {score}");
 
         }
 
@@ -84,11 +67,17 @@ namespace HighScoreTracker
             }
             List<string> result = File.ReadAllLines(filename).ToList();
 
-            List<string> values;
+            List<string> values; // TODO(jcollard 2022-02-11): You will want this to be a List<int>
+            // TODO(jcollard 2022-02-11): set values to be equal to a new List<int>();
 
-            foreach()
+            foreach() // TODO(jcollard 2022-02-11): Try `foreach(string line in results)`
+            // TODO(jcollard 2022-02-11): Inside of the loop you need to call
+            // GetScoreValue(line) to extract the score. Then, values.Add(???)
+            // to add the result to your list
 
                         // TODO(jcollard 2022-02-09): Complete this method third
+
+            // TODO(jcollard 2022-02-11): Finally, you need to return values.
             return null;
         }
 
@@ -166,6 +155,12 @@ namespace HighScoreTracker
             // anything from a void method
 
             // TODO(jcollard 2022-02-09): Complete this method last
+
+            // TODO(jcollard 2022-02-11): 
+            // 1. string entry = ???
+            // 2. scores.Insert(???)
+            // 3. File.WriteAllLines(???)
+            
         }
 
     }

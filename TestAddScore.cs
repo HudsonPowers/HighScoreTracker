@@ -28,15 +28,21 @@ namespace HighScoreTracker
                 Console.Error.WriteLine($"Failure, expected bob 7000 but was {testList[3]}");
                 return false;
             }
-            Program.AddScore(null, 2000, 2, testList);
 
-            if (Program.AddScore = null)
+            try
             {
-                throw new Exception("Error, add score can not be null");
+                Program.AddScore(null, 2000, 2, testList);
+                Console.Error.WriteLine("Expected an error for a null name.");
                 return false;
             }
+            catch
+            {
 
-            if(testList[5] != "null 2000")
+            }
+
+
+
+            if (testList[5] != "null 2000")
             {
                 Console.Error.WriteLine("Failure, expected a name along with your score.");
                 return false;

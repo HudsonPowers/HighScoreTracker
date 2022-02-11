@@ -50,14 +50,13 @@ namespace HighScoreTracker
             {
                 Program.LoadScoreValues("Notafile.txt");
                 Console.WriteLine("Notafile does not exist so catch");
+                return false;
             }
 
-            catch (exception e)
+            catch (Exception x)
             {
                 
             }
-
-            // TODO(jcollard 2022-02-02): Write several more tests cases
 
             return true;
         }

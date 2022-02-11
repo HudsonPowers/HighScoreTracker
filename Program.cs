@@ -12,17 +12,17 @@ namespace HighScoreTracker
         {
             // Feedback(jcollard 2022-02-02): You're off to a great start! The next
             // step is to write your tests.
-            bool testLoadScoreValues = TestLoadScoreValues.RunTest();
-            Console.WriteLine($"Test LoadScoreValues(filename): {testLoadScoreValues}");
-            
+            // bool testLoadScoreValues = TestLoadScoreValues.RunTest();
+            // Console.WriteLine($"Test LoadScoreValues(filename): {testLoadScoreValues}");
+
             bool testGetScoreValue = TestGetScoreValue.RunTest();
             Console.WriteLine($"Test GetScoreValue(score): {testGetScoreValue}");
 
-            bool testFindInsertionPoint = TestFindInsertionPoint.RunTest();
-            Console.WriteLine($"Test FindInsertionPoint(newscore): {testFindInsertionPoint}");
+            // bool testFindInsertionPoint = TestFindInsertionPoint.RunTest();
+            // Console.WriteLine($"Test FindInsertionPoint(newscore): {testFindInsertionPoint}");
 
-            bool testAddScore = TestAddScore.RunTest();
-            Console.WriteLine($"Test AddScore(name, score, insertAt, scores): {testAddScore}");
+            // bool testAddScore = TestAddScore.RunTest();
+            // Console.WriteLine($"Test AddScore(name, score, insertAt, scores): {testAddScore}");
         }
         static void Main(String[] args)
         {
@@ -78,8 +78,17 @@ namespace HighScoreTracker
             // For each line, use GetScoreValue to extract the second column as an int
             // Add the int to values
             // Return values
+            if(File.Exists(filename))
+            {
+                throw new Exception("$The file {filename} does can not be loaded");
+            }
+            List<string> result = File.ReadAllLines(filename).ToList();
 
-            // TODO(jcollard 2022-02-09): Complete this method third
+            List<string> values;
+
+            foreach()
+
+                        // TODO(jcollard 2022-02-09): Complete this method third
             return null;
         }
 
@@ -97,8 +106,10 @@ namespace HighScoreTracker
             // Parse the second element as an int int.Parse(parts[1])
             // Return the result
 
-            // TODO(jcollard 2022-02-09): Complete this method first
-            return -1;
+            List<string> splitdata = score.Split(' ').ToList();
+            string scorepart = splitdata[1];
+            int scorevalue = int.Parse(scorepart);
+            return scorevalue;
         }
 
         // static int FindInsertionPoint(List<int> values, int newScore);
@@ -109,7 +120,7 @@ namespace HighScoreTracker
         /// <param name="values">2, 42</param>
         /// <param name="newScore">56</param>
         /// <returns>56 --> newscore</returns>
-       public static int FindInsertionPoint(List<int> values, int newScore)
+        public static int FindInsertionPoint(List<int> values, int newScore)
         {
             // Initialize a counter variable, insertAt, to 0.
             // Loop through each value in values
@@ -117,8 +128,22 @@ namespace HighScoreTracker
             // Otherwise, the new score should not be inserted above this score so we increment insertAt by 1 and continue.
             // If we reach the end of the list, insertAt should be the length of the list so we return insertAt.
 
-            // TODO(jcollard 2022-02-09): Complete this method second
-            return -1;
+            int insertAt = 0;
+            foreach (int value in values)
+            {
+                // does value need to be defined by a variable to insert newScore above or below it?
+                if (newScore > value)
+                {
+                    return insertAt;
+                }
+                else
+                {
+                    insertAt = insertAt + 1;
+                }
+            }
+
+
+            return insertAt;
         }
 
 

@@ -1,3 +1,5 @@
-Hudson 9001
-Susan 8000
-Collard 1   
+sam 8000
+sue 7500
+sam, 7500
+jerry 7300
+bob, 7000

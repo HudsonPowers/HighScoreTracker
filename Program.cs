@@ -12,17 +12,17 @@ namespace HighScoreTracker
         {
             // Feedback(jcollard 2022-02-02): You're off to a great start! The next
             // step is to write your tests.
-            // bool testLoadScoreValues = TestLoadScoreValues.RunTest();
-            // Console.WriteLine($"Test LoadScoreValues(filename): {testLoadScoreValues}");
+            bool testLoadScoreValues = TestLoadScoreValues.RunTest();
+            Console.WriteLine($"Test LoadScoreValues(filename): {testLoadScoreValues}");
 
             bool testGetScoreValue = TestGetScoreValue.RunTest();
             Console.WriteLine($"Test GetScoreValue(score): {testGetScoreValue}");
 
-            // bool testFindInsertionPoint = TestFindInsertionPoint.RunTest();
-            // Console.WriteLine($"Test FindInsertionPoint(newscore): {testFindInsertionPoint}");
+            bool testFindInsertionPoint = TestFindInsertionPoint.RunTest();
+            Console.WriteLine($"Test FindInsertionPoint(newscore): {testFindInsertionPoint}");
 
-            // bool testAddScore = TestAddScore.RunTest();
-            // Console.WriteLine($"Test AddScore(name, score, insertAt, scores): {testAddScore}");
+            bool testAddScore = TestAddScore.RunTest();
+            Console.WriteLine($"Test AddScore(name, score, insertAt, scores): {testAddScore}");
         }
         static void Main(String[] args)
         {
@@ -41,6 +41,25 @@ namespace HighScoreTracker
             // 4. FindInsertPoint
             // 5. AddScore
             // 6. Display high score list
+
+            Console.WriteLine("Enter your name ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Enter your score");
+            string score = Console.ReadLine();
+            List<int> scores = LoadScoreValues("high_scores.txt");
+            int insertionPoint = FindInsertionPoint(scores, int.Parse(score));
+            AddScore(name, int.Parse(score), insertionPoint, File.ReadAllLines("high_scores.txt").ToList());
+            
+
+            // LoadScoreValues();
+            // FindInsertionPoint();
+            // AddScore(); 
+
+
+
+            // File.display(high_score.txt);
+
 
 
         }
@@ -61,24 +80,29 @@ namespace HighScoreTracker
             // For each line, use GetScoreValue to extract the second column as an int
             // Add the int to values
             // Return values
-            if(File.Exists(filename))
+            if (File.Exists(filename) == false)
             {
-                throw new Exception("$The file {filename} does can not be loaded");
+                throw new Exception($"The file {filename} does can not be loaded");
             }
             List<string> result = File.ReadAllLines(filename).ToList();
 
-            List<string> values; // TODO(jcollard 2022-02-11): You will want this to be a List<int>
-            // TODO(jcollard 2022-02-11): set values to be equal to a new List<int>();
+            List<int> values;
+            values = new List<int>();
 
-            foreach() // TODO(jcollard 2022-02-11): Try `foreach(string line in results)`
+            foreach (string line in result)
+            {
+                int score = GetScoreValue(line);
+                values.Add(score);
+            }
+            // TODO(jcollard 2022-02-11): Try `foreach(string line in results)`
             // TODO(jcollard 2022-02-11): Inside of the loop you need to call
             // GetScoreValue(line) to extract the score. Then, values.Add(???)
             // to add the result to your list
 
-                        // TODO(jcollard 2022-02-09): Complete this method third
+            // TODO(jcollard 2022-02-09): Complete this method third
 
             // TODO(jcollard 2022-02-11): Finally, you need to return values.
-            return null;
+            return values;
         }
 
         // static int GetScoreValue(string score);
@@ -94,7 +118,6 @@ namespace HighScoreTracker
             // Store the result in a variable called parts
             // Parse the second element as an int int.Parse(parts[1])
             // Return the result
-
             List<string> splitdata = score.Split(' ').ToList();
             string scorepart = splitdata[1];
             int scorevalue = int.Parse(scorepart);
@@ -160,7 +183,15 @@ namespace HighScoreTracker
             // 1. string entry = ???
             // 2. scores.Insert(???)
             // 3. File.WriteAllLines(???)
-            
+            if(name == null)
+            {
+                throw new Exception("Can not add a null name.");
+            }
+
+            string entry;
+            entry = $"{name}, {score}";
+            scores.Insert(insertAt, entry);
+            File.WriteAllLines("high_scores.txt", scores);
         }
 
     }

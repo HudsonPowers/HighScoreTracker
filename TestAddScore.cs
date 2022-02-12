@@ -23,7 +23,7 @@ namespace HighScoreTracker
                 return false;
             }
 
-            if (testList[3] != "bob 7000")
+            if (testList[3] != "bob, 7000")
             {
                 Console.Error.WriteLine($"Failure, expected bob 7000 but was {testList[3]}");
                 return false;
@@ -42,15 +42,9 @@ namespace HighScoreTracker
 
 
 
-            if (testList[5] != "null 2000")
-            {
-                Console.Error.WriteLine("Failure, expected a name along with your score.");
-                return false;
-            }
-
             Program.AddScore("sam", 7500, 2, testList);
 
-            return false;
+            return true;
         }
 
     }

@@ -1,0 +1,7 @@
+sam 8000
+sue 7500
+sam, 7500
+jerry 7300
+bob, 7000
+bob, 20
+bob, 20
